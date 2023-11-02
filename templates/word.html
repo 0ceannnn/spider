@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>多店铺信息对比展示系统</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+{#        <h1 class="text-light"><a href="temp.html"><span>Re1_zf</span></a></h1>#}
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/index">首页<i class="la la-angle-down"></i></a></li>
+          <li><a href="/region">地区更改</a></li>
+          <li><a href="/search">搜索</a></li>
+          <li><a href="/word">词云</a></li>
+          <li><a href="/team">团队</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+ <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 video-box">
+            <img src="{{ url_for('static', filename='assets/img/word.jpg', bust=cache_bust) }}">
+
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+            <div class="section-title">
+              <h2>词频统计</h2>
+              <p>根据每天大家的搜索词条，汇聚出来的词云树，来看看大家都在关注什么吧</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <!--自动刷新本界面  或者说本url-->
+              <a href="">
+                  <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                  <h4 class="title">关于生活</h4>
+              </a>
+              <p class="description">繁忙之余，放松一下</p>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+
+
+  <!-- ======= Footer ======= -->
+<footer id="footer" style="display: flex; flex-direction: column; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+  <div class="container" style="margin-top: 10px;">
+    <div class="row">
+      <div class="col-lg-6 text-lg-left text-center" style="margin-top: 20px;">
+        <h4 style="color: #fff; font-size: 24px; font-weight: bold; text-transform: uppercase;">使用说明</h4>
+        <p style="color: #fff; font-size: 16px; margin-top: 20px;">欢迎使用我们的网站！在这个页面，您可以看到大家搜索词频最高的五十个词汇，他们会汇聚成一个树状词云图，您可以以此为参考。感谢您的使用！ 此外，点击指纹图标可以刷新词云图哦~</p>
+      </div>
+      <div class="col-lg-6 text-lg-left text-center" style="margin-top: auto;">
+        <p style="color: #fff; font-size: 16px; margin-bottom: 20px;">&copy; 版权所有：Re1_zf</p>
+      </div>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="/static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+
+</body>
+
+</html>

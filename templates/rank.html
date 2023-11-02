@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>多店铺信息对比展示系统</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+
+    <script src="/static/assets/js/echarts.min.js"></script>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/index">首页<i class="la la-angle-down"></i></a></li>
+          <li><a href="/region">地区更改</a></li>
+          <li><a href="/search">搜索</a></li>
+          <li><a href="/word">词云</a></li>
+          <li><a href="/team">团队</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Our Team Section ======= -->
+  <section id="team" class="team">
+      <div class="section-title">
+      <h2>{{ area1 }}地区{{ content }}{{ options }}TOP5</h2>
+    </div>
+    <div id="bar-chart" style="width:1800px;height:500px;margin: 0 auto;"></div>
+    <script>
+        var myChart = echarts.init(document.getElementById('bar-chart'), 'white', {renderer: 'canvas'});
+        var option = {{ option|safe }};
+        option.series.forEach(function (item) {
+            item.label = {
+                show: true,
+                position: 'top',
+                formatter: '{c}'
+            };
+            item.barWidth = 70;
+        });
+        myChart.setOption(option);
+    </script>
+
+
+<div class="btn-group-vertical" style="position: fixed; right: 0; top: 30%; transform: translateY(-50%);">
+      <button type="button" class="btn btn-outline-primary rounded-circle" style="margin-bottom: 10px; transform: rotate(0deg); transition: transform 0.5s;" onclick="window.location.href='/search?content={{ content }}'">搜索结果</button>
+      <button type="button" class="btn btn-outline-secondary rounded-circle" style="margin-bottom: 10px; transform: rotate(0deg); transition: transform 0.5s;" onclick="window.location.href='/bar?options=评分'">评分TOP5</button>
+      <button type="button" class="btn btn-outline-success rounded-circle" style="margin-bottom: 10px; transform: rotate(0deg); transition: transform 0.5s;" onclick="window.location.href='/bar?options=评论数量'">评论量TOP5</button>
+      <button type="button" class="btn btn-outline-danger rounded-circle" style="margin-bottom: 10px; transform: rotate(0deg); transition: transform 0.5s;" onclick="window.location.href='/bar?options=消费水平'">消费水平TOP5</button>
+    </div>
+</section><!-- End Our Team Section -->
+
+
+  <!-- ======= Footer ======= -->
+<footer id="footer" style="display: flex; flex-direction: column; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+  <div class="container" style="margin-top: 10px;">
+    <div class="row">
+      <div class="col-lg-6 text-lg-left text-center" style="margin-top: 20px;">
+        <h4 style="color: #fff; font-size: 24px; font-weight: bold; text-transform: uppercase;">使用说明</h4>
+        <p style="color: #fff; font-size: 16px; margin-top: 10px;">欢迎使用我们的网站！在这里，您可以分别查看原始列表数据、评分TOP5、评论量TOP5和消费水平TOP5，以便您更直观的对比各个店铺的数据。如果您想查看其他地区的其他店铺的数据，请先点击”地区更改“，更改当前地区为您想要查看的地区后，去”搜索“界面进行搜索，然后您就可以点击右边的按钮来查看更多了数据啦。感谢您的使用！</p>
+      </div>
+      <div class="col-lg-6 text-lg-left text-center" style="margin-top: auto;">
+        <p style="color: #fff; font-size: 16px; margin-bottom: 20px;">&copy; 版权所有：Re1_zf</p>
+      </div>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+
+
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="/static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+
+</body>
+
+</html>
